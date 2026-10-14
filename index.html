@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shriya Goyal — First-Year B.Tech ECE Student at JECRC University, Jaipur | Aspiring Software Developer.">
+  <meta name="keywords" content="Shriya Goyal, Portfolio, B.Tech ECE, JECRC University, Software Developer, Web Development, C, HTML, CSS, JavaScript">
+  <meta name="author" content="Shriya Goyal">
+  
+  <title>Shriya Goyal | First-Year B.Tech ECE Student | Aspiring Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Background Particle Animation Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Subtle Ambient Glow Orbs -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="brand-logo" aria-label="Shriya Goyal Home">
+        <span class="logo-tag">&lt;</span>Shriya<span class="logo-tag"> /&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme & Resume & Hamburger) -->
+      <div class="nav-actions">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light theme" title="Toggle Theme">
+          <span class="theme-icon-dark">🌙</span>
+          <span class="theme-icon-light">☀️</span>
+        </button>
+
+        <!-- Resume CTA Link -->
+        <a href="assets/docs/resume.html" target="_blank" class="btn-nav-resume">
+          <span>Resume</span>
+          <span>↗</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Open mobile navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation Drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#education" class="mobile-nav-link">Education</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#terminal" class="mobile-nav-link">Terminal</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="assets/docs/resume.html" target="_blank" class="btn btn-primary">
+      <span>View Resume ↗</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>First-Year B.Tech ECE • JECRC University, Jaipur</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <br>
+            <span class="gradient-text">Shriya Goyal</span> 👋
+          </h1>
+
+          <div class="hero-role-title">
+            First-Year B.Tech ECE Student | Aspiring Software Developer
+          </div>
+
+          <div class="hero-subtitle">
+            Focusing on <span id="typewriter" class="hero-typewriter"></span>
+          </div>
+
+          <p class="hero-description">
+            I am a first-year B.Tech ECE student at JECRC University with a strong academic foundation and a growing interest in software and web development. I am currently building my programming fundamentals, working on web projects, and exploring AI tools. I am eager to learn, work on real-world projects and gain my first internship experience.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <span>↓</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/shriya-goyal-6448a8428?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:shriyag124@gmail.com" class="social-link" title="Send Email" aria-label="Email">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+            <a href="tel:+919548980960" class="social-link" title="Call Me" aria-label="Phone">
+              <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Avatar & Badges) -->
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <img src="assets/images/avatar.svg" alt="Illustration of Shriya Goyal coding software on a laptop" width="420" height="420">
+            
+            <div class="floating-pill floating-pill-1">
+              <span>💻</span>
+              <span>Web Development</span>
+            </div>
+
+            <div class="floating-pill floating-pill-2">
+              <span>⚡</span>
+              <span>C Programming</span>
+            </div>
+
+            <div class="floating-pill floating-pill-3">
+              <span>🎓</span>
+              <span>JECRC University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About Me Section
+         ========================================================================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Get To Know Me</div>
+          <h2 class="section-title">About <span class="gradient-text">Shriya Goyal</span></h2>
+          <p class="section-subtitle">
+            First-year engineering student passionate about software craftsmanship, web development, and problem-solving.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a first-year B.Tech ECE student at JECRC University with a strong academic foundation and a growing interest in software and web development. I am currently building my programming fundamentals, working on web projects, and exploring AI tools. I am eager to learn, work on real-world projects and gain my first internship experience.
+            </p>
+
+            <!-- Career Goal & Internship Cards -->
+            <div class="about-highlights-grid">
+              <div class="highlight-card highlight-card-primary">
+                <div class="highlight-card-header">
+                  <div class="highlight-title">
+                    <span>🎯</span>
+                    <span>Career Goal</span>
+                  </div>
+                  <span class="highlight-badge">Focus</span>
+                </div>
+                <p class="highlight-desc">
+                  To grow as a software developer by strengthening my programming fundamentals, building practical projects and gaining real-world industry experience.
+                </p>
+              </div>
+
+              <div class="highlight-card highlight-card-success">
+                <div class="highlight-card-header">
+                  <div class="highlight-title">
+                    <span>💼</span>
+                    <span>Internship Opportunity</span>
+                  </div>
+                  <span class="highlight-badge seeking">Actively Seeking</span>
+                </div>
+                <p class="highlight-desc">
+                  Currently seeking my first internship opportunity in software development and web development.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Card (shriya.profile.js) -->
+          <div class="code-window">
+            <div class="window-header">
+              <span class="window-dot window-dot-red"></span>
+              <span class="window-dot window-dot-yellow"></span>
+              <span class="window-dot window-dot-green"></span>
+              <span class="window-title">shriya.profile.js</span>
+            </div>
+            <pre class="window-body"><code><span class="syntax-keyword">const</span> <span class="syntax-var">developer</span> = {
+  <span class="syntax-var">name</span>: <span class="syntax-string">"Shriya Goyal"</span>,
+  <span class="syntax-var">university</span>: <span class="syntax-string">"JECRC University, Jaipur"</span>,
+  <span class="syntax-var">program</span>: <span class="syntax-string">"B.Tech ECE"</span>,
+  <span class="syntax-var">year</span>: <span class="syntax-string">"First Year (2026–Present)"</span>,
+  <span class="syntax-var">skills</span>: [
+    <span class="syntax-string">"C"</span>, <span class="syntax-string">"HTML"</span>, <span class="syntax-string">"CSS"</span>,
+    <span class="syntax-string">"JavaScript"</span>, <span class="syntax-string">"Git &amp; GitHub"</span>,
+    <span class="syntax-string">"Web Development"</span>, <span class="syntax-string">"AI Tools"</span>,
+    <span class="syntax-string">"Problem Solving"</span>
+  ],
+  <span class="syntax-var">seekingInternship</span>: <span class="syntax-bool">true</span>
+};</code></pre>
+          </div>
+        </div>
+
+        <!-- Academic Overview Stats -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number gradient-text">1st Year</div>
+            <div class="stat-label">B.Tech ECE • JECRC University</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number gradient-text">84.8%</div>
+            <div class="stat-label">Class 12 • Saraswati Vidya Mandir</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number gradient-text">95.4%</div>
+            <div class="stat-label">Class 10 • Saraswati Vidya Mandir</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Education Section
+         ========================================================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Academic Qualifications</div>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">
+            Strong academic credentials grounding my journey into software engineering and technology.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Milestone 1: JECRC University -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-badge">First Year</span>
+                <span class="timeline-period">2026 – Present</span>
+              </div>
+              <h3 class="timeline-title">Bachelor of Technology (B.Tech) — ECE</h3>
+              <p class="timeline-institute">JECRC University, Jaipur</p>
+              <div class="timeline-desc">
+                <p>Enrolled as a first-year undergraduate student in Electronics &amp; Communication Engineering with an active focus on software development.</p>
+                <ul>
+                  <li>Building foundational understanding of programming in C, computational thinking, and software architecture.</li>
+                  <li>Practicing responsive web development and exploring modern AI productivity tools.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Class 12 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-badge">Class 12</span>
+                <span class="timeline-period">2024</span>
+              </div>
+              <h3 class="timeline-title">Senior Secondary Examination</h3>
+              <p class="timeline-institute">Saraswati Vidya Mandir, Mathura • Percentage: 84.8%</p>
+              <div class="timeline-desc">
+                <p>Completed senior secondary schooling with strong academic performance (84.8%).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Class 10 -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-badge">Class 10</span>
+                <span class="timeline-period">2022</span>
+              </div>
+              <h3 class="timeline-title">Secondary School Examination</h3>
+              <p class="timeline-institute">Saraswati Vidya Mandir, Mathura • Percentage: 95.4%</p>
+              <div class="timeline-desc">
+                <p>Achieved high academic distinction in secondary school board examinations with 95.4% aggregate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Skills Section
+         ========================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Technical Repertoire</div>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-subtitle">
+            Languages, frameworks, and developer tools I actively practice and apply.
+          </p>
+        </div>
+
+        <div class="skills-grid-wrapper">
+          <!-- Skill 1: C -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">⚙️</div>
+              <div class="skill-info">
+                <h3 class="skill-name">C</h3>
+                <span class="skill-category-tag">Programming</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2: HTML -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">🌐</div>
+              <div class="skill-info">
+                <h3 class="skill-name">HTML</h3>
+                <span class="skill-category-tag">Markup &amp; Structure</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3: CSS -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">🎨</div>
+              <div class="skill-info">
+                <h3 class="skill-name">CSS</h3>
+                <span class="skill-category-tag">Styling &amp; Layouts</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="88%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4: JavaScript -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">⚡</div>
+              <div class="skill-info">
+                <h3 class="skill-name">JavaScript</h3>
+                <span class="skill-category-tag">Web Interactivity</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 5: Git & GitHub -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">🐙</div>
+              <div class="skill-info">
+                <h3 class="skill-name">Git &amp; GitHub</h3>
+                <span class="skill-category-tag">Version Control</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 6: Web Development -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">💻</div>
+              <div class="skill-info">
+                <h3 class="skill-name">Web Development</h3>
+                <span class="skill-category-tag">Frontend &amp; UI</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 7: AI Tools -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">🤖</div>
+              <div class="skill-info">
+                <h3 class="skill-name">AI Tools</h3>
+                <span class="skill-category-tag">Productivity &amp; Workflow</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="82%"></div>
+            </div>
+          </div>
+
+          <!-- Skill 8: Problem Solving -->
+          <div class="skill-card-item">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle">🧩</div>
+              <div class="skill-info">
+                <h3 class="skill-name">Problem Solving</h3>
+                <span class="skill-category-tag">Algorithmic Logic</span>
+              </div>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-fill-bar" data-width="84%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Projects Section
+         ========================================================================== -->
+    <section id="projects" class="section">
+      <div class="container projects-container-focused">
+        <div class="section-header">
+          <div class="section-badge">Hands-On Work</div>
+          <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            Practical projects built to practice software fundamentals, user interface design, and problem solving.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Portfolio Website -->
+          <div class="project-card">
+            <div class="project-thumbnail">
+              <img src="assets/images/project-portfolio.svg" alt="Portfolio Website Project Preview" loading="lazy">
+              <span class="project-badge-pill">Personal Portfolio</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-description">
+                A personal portfolio website built to showcase my skills, projects, education and learning journey. Designed with responsive layouts, dark/light theme switching, and interactive components.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#home" class="project-link-btn primary" title="View Portfolio Home">
+                  <span>View Live Site</span> ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Web Application -->
+          <div class="project-card">
+            <div class="project-thumbnail">
+              <img src="assets/images/project-webapp.svg" alt="Web Application Project Preview" loading="lazy">
+              <span class="project-badge-pill">Web Application</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Web Application</h3>
+              <p class="project-description">
+                A web application project created to practice web development, UI design and problem-solving. Features modular layouts, responsive UI components, and interactive JavaScript features.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Web Development</span>
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="project-link-btn primary" title="Project Overview">
+                  <span>Project Overview</span> ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Terminal Playground
+         ========================================================================== -->
+    <section id="terminal" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Interactive Terminal</div>
+          <h2 class="section-title">Developer <span class="gradient-text">CLI</span></h2>
+          <p class="section-subtitle">
+            Explore my profile via command line! Click any action button or type a command.
+          </p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="interactive-terminal">
+            <div class="terminal-header">
+              <span class="window-dot window-dot-red"></span>
+              <span class="window-dot window-dot-yellow"></span>
+              <span class="window-dot window-dot-green"></span>
+              <span class="terminal-title">shriya@jecrc-ece: ~ (bash)</span>
+            </div>
+
+            <div id="terminal-body" class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt-user">visitor@shriya</span>:<span class="terminal-prompt-path">~</span>$ <span class="terminal-command-echo">welcome</span>
+              </div>
+              <div class="terminal-output">Welcome to Shriya Goyal's interactive terminal! ⚡
+Type 'help' to see all available commands, or click the quick action chips below.</div>
+            </div>
+
+            <div class="terminal-quick-cmds">
+              <button class="quick-cmd-btn" data-cmd="help">help</button>
+              <button class="quick-cmd-btn" data-cmd="about">about</button>
+              <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+              <button class="quick-cmd-btn" data-cmd="education">education</button>
+              <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+              <button class="quick-cmd-btn" data-cmd="goal">goal</button>
+              <button class="quick-cmd-btn" data-cmd="internship">internship</button>
+              <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+              <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+            </div>
+
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-user">visitor@shriya</span>:<span class="terminal-prompt-path">~</span>$&nbsp;
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. skills, goal) and press Enter..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact Section
+         ========================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">Get In Touch</div>
+          <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">
+            Seeking my first internship opportunity in software development and web development. Feel free to connect!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-list">
+            <!-- Email -->
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <div class="contact-title">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:shriyag124@gmail.com">shriyag124@gmail.com</a>
+                </div>
+              </div>
+              <button id="copy-email-btn" class="copy-btn" title="Copy email to clipboard">Copy</button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <div class="contact-title">Phone</div>
+                <div class="contact-value">
+                  <a href="tel:+919548980960">+91 9548980960</a>
+                </div>
+              </div>
+              <a href="tel:+919548980960" class="copy-btn" title="Call directly">Call</a>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <div class="contact-title">Location</div>
+                <div class="contact-value">Uttar Pradesh, India</div>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-card">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <div class="contact-title">LinkedIn</div>
+                <div class="contact-value">
+                  <a href="https://www.linkedin.com/in/shriya-goyal-6448a8428?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">shriya-goyal-6448a8428</a>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/shriya-goyal-6448a8428?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="copy-btn">Visit ↗</a>
+            </div>
+          </div>
+
+          <!-- Contact Form Container -->
+          <div class="contact-form-container">
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Your Email *</label>
+                  <input type="email" id="form-email" class="form-control" placeholder="Enter your email address" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-control" placeholder="Internship opportunity, inquiry, etc.">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message *</label>
+                <textarea id="form-message" class="form-control" placeholder="Write your message here..." rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+                <span>Send Message</span>
+                <span>✉️</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <span class="logo-tag">&lt;</span>Shriya<span class="logo-tag"> /&gt;</span>
+          </a>
+          <p class="footer-tagline">
+            First-Year B.Tech ECE Student • JECRC University, Jaipur
+          </p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/shriya-goyal-6448a8428?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="mailto:shriyag124@gmail.com" class="social-link" title="Send Email">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </a>
+          <a href="tel:+919548980960" class="social-link" title="Call Me">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Shriya Goyal © 2026. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll back to top" title="Scroll to top">
+    ↑
+  </button>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
